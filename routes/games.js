@@ -29,12 +29,12 @@ module.exports = io => {
     .post('/games', authenticate, (req, res, next) => {
       const newGame = {
         userId: req.account._id,
-        players: [{
-          userId: req.account._id,
-          pairs: []
-        }],
-        cards: utils.shuffle('✿★♦✵♣♠♥✖'.repeat(2).split(''))
-          .map((symbol) => ({ visible: false, symbol: symbol }))
+        players: [req.account._id],
+        tiles: [
+          null, null, null,
+          null, null, null,
+          null, null, null,
+        ]
       }
 
       Game.create(newGame)
