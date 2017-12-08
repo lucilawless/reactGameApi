@@ -1,6 +1,6 @@
-# Express Recipes API
+# Express Games API
 
-RESTful Express API for Recipes on top of MongoDB.
+RESTful Express API for Games on top of MongoDB.
 
 ## Authentication
 
